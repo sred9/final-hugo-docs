@@ -70,7 +70,7 @@
       }
 
       &.active {
-        font-weight: bold;
+        font-weight: 400;
         color: themed('active-font-color');
       }
     }
@@ -172,7 +172,11 @@
       margin-left: 1.25rem;
 
       &.active {
-        font-weight: bold;
+        font-weight: 400;
+		
+	background-color: rgba(146,147,148,.3);
+    border-bottom: 0 transparent;
+    border-radius: 3px;
       }
     }
   }
@@ -184,7 +188,7 @@
   li.active {
     @include themify($themes) {
       a {
-        font-weight: bold;
+        font-weight: 400;
       }
     }
   }
