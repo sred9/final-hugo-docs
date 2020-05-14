@@ -204,5 +204,15 @@
 
 .theme__light a:hover, .theme__light a:active, .theme__light a:focus{
 text-decoration: none!important;
+}
 
+.menu{
+
+&:hover{
+text-decoration: none;
+}
+
+&:focus{
+text-decoration: none;
+}
 }
