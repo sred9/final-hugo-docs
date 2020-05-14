@@ -50,7 +50,11 @@
     &--item {
       height: $grid-nav-height;
       padding: 0rem 0.75rem;
-
+	
+		
+		
+		
+		
       & > a {
         height: 100%;
         font-family: $title-font;
@@ -66,8 +70,12 @@
       @include themify($themes) {
         color: themed('navbar-menu-color');
         &.active {
-          font-weight: bold;
+          font-weight: 400;
           color: themed('active-font-color');
+		  	
+			background-color: rgba(146,147,148,.3);
+    border-bottom: 0 transparent;
+    border-radius: 3px;
         }
       }
     }
@@ -101,9 +109,7 @@
             font-weight: 400;
             color: themed('active-font-color');
             
-			background-color: rgba(146,147,148,.3);
-    border-bottom: 0 transparent;
-    border-radius: 3px;
+
           }
         }
       }
@@ -298,3 +304,4 @@
     }
   }
 }
+
