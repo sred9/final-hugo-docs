@@ -1,11 +1,11 @@
 #single-menu {
   @include themify($themes) {
     &[data-dir="ltr"] {
-      border: 1px solid themed('border-line-color');
+      border: 0px solid themed('border-line-color');
     }
 
     &[data-dir="rtl"] {
-      border: 1px solid themed('border-line-color');
+      border: 0px solid themed('border-line-color');
     }
   }
 }

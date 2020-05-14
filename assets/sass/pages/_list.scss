@@ -7,11 +7,13 @@
     background-color: themed('body-background-color');
 
     &[data-dir="ltr"] {
-      border-right: 1px solid themed('border-line-color');
+      border: 1px solid themed('border-line-color');
+	  border-radius: 3px;
     }
 
     &[data-dir="rtl"] {
-      border-left: 1px solid themed('border-line-color');
+      border: 1px solid themed('border-line-color');
+	  border-radius: 3px;
     }
   }
 }
@@ -21,11 +23,11 @@
   
   @include themify($themes) {
     &[data-dir="ltr"] {
-      border: 1px solid themed('border-line-color');
+      border: 0px solid themed('border-line-color');
     }
 
     &[data-dir="rtl"] {
-      border: 1px solid themed('border-line-color');
+      border: 0px solid themed('border-line-color');
     }
   }
 }
