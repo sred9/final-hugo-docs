@@ -35,27 +35,27 @@
     cursor: pointer;
     position: relative;
     word-break: break-word;
-    font-size: 0.925rem;
+    font-size: 18px;
     height: $menu-title-height;
     margin: 0.25rem 0;
 
     &[data-depth="1"] {
-      font-size: 0.925rem;
+      font-size: 18px;
       margin-left: 1.25rem;
     }
 
     &[data-depth="2"] {
-      font-size: 0.925rem;
+      font-size: 18px;
       margin-left: 2.5rem;
     }
 
     &[data-depth="3"] {
-      font-size: 0.925rem;
+      font-size: 18px;
       margin-left: 3.75rem;
     }
 
     &[data-depth="4"] {
-      font-size: 0.925rem;
+      font-size: 18px;
       margin-left: 5rem;
     }
 
@@ -83,22 +83,22 @@
       margin: 0.25rem 0;
 
       &[data-depth="1"] {
-        font-size: 0.925rem;
+        font-size: 18px;
         margin-left: 1.25rem;
       }
 
       &[data-depth="2"] {
-        font-size: 0.925rem;
+        font-size: 18px;
         margin-left: 2.5rem;
       }
 
       &[data-depth="3"] {
-        font-size: 0.925rem;
+        font-size: 18px;
         margin-left: 3.75rem;
       }
 
       &[data-depth="4"] {
-        font-size: 0.925rem;
+        font-size: 18px;
         margin-left: 5rem;
       }
 
