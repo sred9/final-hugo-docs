@@ -207,6 +207,9 @@ text-decoration: none!important;
 }
 
 .menu{
+a{
+
+margin: 12px 0;
 
 &:hover{
 text-decoration: none;
@@ -214,5 +217,7 @@ text-decoration: none;
 
 &:focus{
 text-decoration: none;
+}
+
 }
 }
