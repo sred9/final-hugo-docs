@@ -98,9 +98,12 @@
           }
 
           &.active {
-            font-weight: bold;
+            font-weight: 400;
             color: themed('active-font-color');
-            background-color: themed('dropdown-item-active-background-color');
+            
+			background-color: rgba(146,147,148,.3);
+    border-bottom: 0 transparent;
+    border-radius: 3px;
           }
         }
       }
