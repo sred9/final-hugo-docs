@@ -38,7 +38,11 @@
     font-size: 18px;
     height: $menu-title-height;
     margin: 0.25rem 0;
-
+	text-decoration: none;
+	&:hover{
+	text-decoration: none;
+	
+	}
     &[data-depth="1"] {
       font-size: 18px;
       margin-left: 1.25rem;
