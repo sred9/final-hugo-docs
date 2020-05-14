@@ -18,7 +18,7 @@
 }
 
 @mixin font-source-sans($size: false, $colour: false, $weight: false, $lh: false) {
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;	
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   @if $size {
     font-size: $size;
   }
