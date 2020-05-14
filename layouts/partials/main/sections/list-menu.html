@@ -59,7 +59,7 @@
   {{ $lastUrlElement1 := index (last 1 (split (delimit (split $ctx.Permalink "/") "," "") ",")) 0 }}
   {{ $lastUrlElement2 := index (last 1 (split (delimit (split $currentURL "/") "," "") ",")) 0 }}
   <li class="{{ if $active }}active{{ end }}">
-    <a href="{{ $ctx.Permalink }}" class="menu__title {{ if $active }}active{{ end }}">{{ $ctx.Title }}</a>
+    <a id="{{ $ctx.Title }}" href="{{ $ctx.Permalink }}" class="menu__title {{ if $active }}active{{ end }}">{{ $ctx.Title }}</a>
   </li>
   {{ end }}
 {{ end }}
