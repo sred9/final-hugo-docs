@@ -173,16 +173,19 @@
 
       &.active {
         font-weight: 400;
-		
-	background-color: rgba(146,147,148,.3);
+		background-color: rgba(146,147,148,.3);
     border-bottom: 0 transparent;
     border-radius: 3px;
+	
       }
     }
   }
 
   .active {
     max-height: 100%;
+	background-color: rgba(146,147,148,.3);
+    border-bottom: 0 transparent;
+    border-radius: 3px;
   }
 
   li.active {
