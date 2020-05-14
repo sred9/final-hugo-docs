@@ -1,6 +1,7 @@
 .mid {
   @include themify($themes) {
     background-color: themed('back-background-color');
+	padding-top: 0.5rem;
   }
 }
 .main {

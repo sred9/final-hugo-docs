@@ -21,11 +21,11 @@
   
   @include themify($themes) {
     &[data-dir="ltr"] {
-      border-right: 1px solid themed('border-line-color');
+      border: 1px solid themed('border-line-color');
     }
 
     &[data-dir="rtl"] {
-      border-left: 1px solid themed('border-line-color');
+      border: 1px solid themed('border-line-color');
     }
   }
 }
