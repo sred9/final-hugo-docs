@@ -172,7 +172,7 @@
       margin-left: 1.25rem;
 
       &.active {
-        font-weight: bold;
+        font-weight: 400;
       }
     }
   }
@@ -184,7 +184,7 @@
   li.active {
     @include themify($themes) {
       a {
-        font-weight: bold;
+        font-weight: 400;
       }
     }
   }
