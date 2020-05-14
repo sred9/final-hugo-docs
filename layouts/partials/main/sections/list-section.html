@@ -2,7 +2,7 @@
 <div class="list-section">
   {{ range .section_to_display }}
     <div class="list-section__item">
-      <a href="{{ .Permalink }}" class="list-section__item--link">
+      <a id="{{ .Title }}" href="{{ .Permalink }}" class="list-section__item--link">
         {{ .Title }}
       </a>
       <div class="list-section__item--desc">
