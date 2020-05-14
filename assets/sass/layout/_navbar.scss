@@ -244,7 +244,7 @@
 
   &__dropdown {
     height: 30px;
-    font-size: 17.2px;
+    font-size: 18px;
 
     @include flexbox();
     @include align-items(center);
@@ -260,7 +260,7 @@
     }
 
     &--title {
-      font-size: 16.8px;
+      font-size: 18px;
       font-family: $title-font;
       border: none;
       outline: none;
