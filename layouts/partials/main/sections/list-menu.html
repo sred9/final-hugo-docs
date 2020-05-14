@@ -48,7 +48,7 @@
     {{ $lastUrlElement1 := index (last 1 (split (delimit (split .Permalink "/") "," "") ",")) 0 }}
     {{ $lastUrlElement2 := index (last 1 (split (delimit (split $currentURL "/") "," "") ",")) 0 }}
     <li>
-      <a href="{{ .Permalink }}"
+      <a id="{{ .Title }}" href="{{ .Permalink }}"
         class="menu__title {{ if and (eq $lastUrlElement1 $lastUrlElement2) (eq $sectionName1 $sectionName2) }}active{{ end }}"
         data-depth="{{ $depth }}">{{ .Title }}</a>
     </li>
