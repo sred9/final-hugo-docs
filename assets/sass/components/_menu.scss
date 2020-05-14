@@ -42,6 +42,13 @@
 	&:hover{
 	text-decoration: none;
 	
+	a{
+	text-decoration: none;
+	&:hover{
+	text-decoration: none;
+	}
+	}
+	
 	}
     &[data-depth="1"] {
       font-size: 18px;
@@ -193,3 +200,6 @@
     }
   }
 }
+
+
+
