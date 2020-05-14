@@ -206,18 +206,18 @@
 text-decoration: none!important;
 }
 
+
 .menu{
-a{
+	a{
+	margin: 12px 0;
 
-margin: 12px 0;
+	&:hover{
+	text-decoration: none;
+	}
 
-&:hover{
-text-decoration: none;
-}
+	&:focus{
+	text-decoration: none;
+	}
 
-&:focus{
-text-decoration: none;
-}
-
-}
+	}
 }
