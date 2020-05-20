@@ -16,10 +16,11 @@
 
   &__label {
     font-family: $title-font;
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin: 0.65rem 0;
     padding-bottom: 0.5rem;
     text-transform: capitalize;
+	font-weight: 500;
 
     @include themify($themes) {
       color: themed('toc-label-color');

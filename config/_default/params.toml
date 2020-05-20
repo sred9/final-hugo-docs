@@ -7,7 +7,7 @@ themeOptions = ["light", "dark"]
 
 useFaviconGenerator = true # https://www.favicon-generator.org/
 
-enableTocSwitch = true
+enableTocSwitch = false
 enableLandingBackground = false
 enableSearch = true
 enableSearchHighlight = true
@@ -22,7 +22,7 @@ enableNavbar = true
 enableFooter = true
 showPoweredBy = true
 
-tocLevels = ["h2", "h3", "h4"]
+tocLevels = ["h2"]
 paginateWindow = 1
 taxoPaginate = 13
 taxoGroupByDate = "2006" # "2006-01": group by month, "2006": group by year

@@ -25,7 +25,7 @@
 
   &__title {
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 500;
     font-family: $title-font;
     line-height: 3rem;
     overflow-wrap: break-word;
@@ -88,7 +88,7 @@
     h1,
     h2 {
       color: inherit;
-      font-weight: 900;
+      font-weight: 500;
       text-rendering: optimizeLegibility; 
 
       @include themify($themes) {
@@ -102,12 +102,13 @@
     h6 {
       @include themify($themes) {
         color: themed("single-contents-subtitle-color");
+
       }
     }
 
     h1 {
-      font-size: 2.6rem;
-      margin: 3.5rem 0 1.75rem 0;
+      font-size: 1.9rem;
+      margin: 0rem 0 1.5rem 0;
     }
 
     h2 {
@@ -278,7 +279,7 @@
 
     a.footnote-ref {
       font-size: 0.75rem;
-      font-weight: bold;
+      font-weight: 500;
       margin-left: 3px;
 
       &::before {
@@ -452,7 +453,7 @@ pre:not(.chroma) {
       padding: 0.125rem 0.25rem;
       height: 25px;
       font-family: $title-font;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 0.85rem;
       line-height: 1.5;
       display: inline-block;

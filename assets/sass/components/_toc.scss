@@ -18,12 +18,13 @@
 
   &__label {
     font-family: $title-font;
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin-top: 0.65rem;
     margin-bottom: 1rem;
     margin-left: 1.25rem;
     padding-bottom: 0.5rem;
-
+	font-weight: 500;
+	
     @include themify($themes) {
       color: themed('toc-label-color');
     }

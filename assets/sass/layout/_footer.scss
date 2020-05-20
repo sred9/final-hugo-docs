@@ -1,6 +1,6 @@
 .bot {
   @include themify($themes) {
-    background-color: themed('navbar-background-color');
+    background-color: themed('footer-background-color');
   }
 }
 .footer {
