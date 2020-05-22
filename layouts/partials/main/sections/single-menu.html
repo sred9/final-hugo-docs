@@ -1,11 +1,11 @@
 <div class="menu">
-  <h6 class="menu__label">
+  <!--<h6 class="menu__label">
     {{ if .IsHome }}
       {{ .Site.Title }}
     {{ else }}
       {{ $.Param "Title" }}
     {{ end }}
-  </h6>
+  </h6>-->
   <ul>
     {{ $root := . }}
     {{ range (.Site.GetPage "section" .Type).Pages }}
