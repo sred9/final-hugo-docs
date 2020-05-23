@@ -95,6 +95,7 @@ sections:
 <div class="mast">
 <h2>Fast in every way that matters</h2>
 <p>Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps</p>
+<p>Our curriculum is free and supported by a passionate open source community.</p>
 </div>
 
 <div class="mast">
@@ -103,7 +104,7 @@ sections:
 
 
 <ul class="section-items home">
-  <li class="section-item"><a class="item-link" href="/html/home/"><span class="iconify" data-icon="logos:html-5" data-inline="false"></span>HTML<span class="icon-angle-right" aria-hidden="true"></span></a></li>
+  <li class="section-item"><a class="item-link" href="/html/"><span class="iconify" data-icon="logos:html-5" data-inline="false"></span>HTML<span class="icon-angle-right" aria-hidden="true"></span></a></li>
   <li class="section-item"><a class="item-link" href="/html/installation/"><span class="iconify" data-icon="logos:css-3" data-inline="false"></span>CSS<span class="icon-angle-right" aria-hidden="true"></span></a></li>
   <li class="section-item"><a class="item-link" href="/html/quick-start/"><span class="iconify" data-icon="logos:javascript" data-inline="false"></span>Javascript<span class="icon-angle-right" aria-hidden="true"></span></a></li>
   <li class="section-item"><a class="item-link" href="/html/home/"><span class="iconify" data-icon="logos:html-5" data-inline="false"></span>Bulma<span class="icon-angle-right" aria-hidden="true"></span></a></li>

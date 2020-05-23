@@ -7,7 +7,7 @@ dark_nav_icon_color = "#ccc"
 
 
 light_active_font_color = "#fff"
-light_link_color = "#007d9c"
+light_link_color = "#006400"
 light_link_hover_color = "#5533ff"
 light_nav_logo_color = "#242729"
 light_nav_menu_color = "rgba(255,255,255,0.9)"
