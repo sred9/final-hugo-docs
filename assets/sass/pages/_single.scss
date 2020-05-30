@@ -146,8 +146,8 @@
       direction: ltr;
 
       @include themify($themes) {
-        border-top: 1px solid themed('border-line-color');
-        border-bottom: 1px solid themed('border-line-color');
+        border-top: 0px solid themed('border-line-color');
+        border-bottom: 0px solid themed('border-line-color');
 
         @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
         @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
@@ -159,7 +159,7 @@
       margin: 1rem 0;
 
       @include themify($codeblock) {
-        border-left: 4px solid themed('content-pre-border-background-color');
+        border-left: 0px solid themed('content-pre-border-background-color');
       }
     }
 
@@ -371,6 +371,7 @@ pre.chroma {
 
   code {
     padding: 0;
+    font-size: 1rem;
   }
 }
 
@@ -431,6 +432,7 @@ pre:not(.chroma) {
 
   code {
     padding: 0;
+    font-size: 1rem;
   }
 
   code[data-lang] {
@@ -523,7 +525,7 @@ pre:not(.chroma) {
 
     @include themify($codeblock) {
       td:first-child {
-        border-left: 4px solid themed('content-pre-border-background-color');
+        border-left: 0px solid themed('content-pre-border-background-color');
       }
     }
   }

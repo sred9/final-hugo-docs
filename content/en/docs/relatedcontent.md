@@ -12,6 +12,24 @@ HTML stands for HyperText Markup Language. HTML is the basic building block of W
 
 Hypertext is text displayed on a computer or other electronic device with references to other text that the user can immediately access, usually by a mouse click or key press.
 
+```java
+  System.out.println('Hello World!');
+  ```
+
+
+{{< codes java javascript >}}
+  {{< code >}}
+  ```java
+  System.out.println('Hello World!');
+  ```
+  {{< /code >}}
+  {{< code >}}
+  ```javascript
+  console.log('Hello World!');
+  ```
+  {{< /code >}}
+{{< /codes >}}
+
 ## Formatting Text
 
 HTML provides several tags that you can use to make some text on your web pages to appear differently than normal text, for example, you can use the tag `<b>` to make the text bold, tag `<i>` to make the text italic, tag `<mark>` to highlight the text, tag `<code>` to display a fragment of computer code, tags `<ins>` and `<del>` for marking editorial insertions and deletions, and more.
