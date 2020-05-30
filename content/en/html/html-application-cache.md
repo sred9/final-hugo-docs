@@ -1,6 +1,6 @@
 ---
 title: "HTML Application Cache"
-path: "/html-application-cache"
+url: "/html-application-cache"
 id: "html-application-cache"
 description: "The &lt;abbr&gt; tag defines an abbreviated form of a longer word or phrase."
 ---

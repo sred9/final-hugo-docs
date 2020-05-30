@@ -84,6 +84,7 @@
       &.active {
         font-weight: 400;
         color: themed('active-font-color');
+        text-decoration: underline;
       }
     }
 
@@ -204,7 +205,7 @@
 
 
 .theme__light a:hover, .theme__light a:active, .theme__light a:focus{
-text-decoration: none!important;
+text-decoration: none;
 }
 
 

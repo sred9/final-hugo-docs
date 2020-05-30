@@ -54,7 +54,7 @@
 	  font-size: 18px!important;
 	
 		
-		
+  
 		
 		
       & > a {
@@ -71,6 +71,8 @@
 
       @include themify($themes) {
         color: themed('navbar-menu-color');
+
+
         &.active {
           font-weight: 400;
           color: themed('active-font-color_nav');
@@ -83,7 +85,8 @@
          
             transform: translateY(-1px);
             box-shadow: -14 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
-  
+          
+
         }
         
         }
@@ -112,9 +115,11 @@
           
           @include on-event {
             text-decoration: none;  
-            color: themed('link-hover');
+            color: themed('navbar-hover-color');
           }
 
+
+          
           &.active {
             font-weight: 400;
             color: themed('active-font-color');
@@ -315,3 +320,19 @@
   }
 }
 
+
+
+
+
+  ul.navbar__menu{
+
+    li{
+      a{
+        &:hover{
+          @include themify($themes) {
+            color: themed('navbar-hover-color');
+            }
+      }
+    }
+    }
+  }

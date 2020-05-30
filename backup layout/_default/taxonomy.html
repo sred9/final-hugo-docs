@@ -3,18 +3,18 @@
   <header class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        {{ partial "header/blog-header.html" . }}
+        {{ partial "header/taxo-header.html" . }}
       </div>
     </div>
   </header>
-  
+
   <div class="header__wrapper bgcolor__breadcrumb">
     <div class="divider">
       <div class="lmr flexbox jc-center flex-wrap tag__wrapper">
         {{ range $index, $element := .Site.Taxonomies.tags }}
           {{ if $index }}
             <a href="{{ $element.Page.RelPermalink }}" class="tag">
-              <span id="{{ $element.Page.Title }}" class="tag__text">
+              <span class="tag__text">
                 {{ $element.Page.Title }}
               </span>
               <span class="tag__num" dir="auto">
@@ -27,17 +27,18 @@
     </div>
   </div>
 </div>
+
 <div class="mid blog__bg">
   <main class="main blog__bg">
     <div class="sv" data-view="full">
       <div class="blog">
-        {{ $paginator := .Paginate (where .RegularPages "Type" .Type) }}
-        {{ range $paginator.Pages }}
+        {{ range .RegularPages }}
           {{ .Render "summary" }}
         {{ end }}
         {{ partial "main/component/pagination.html" . }}
       </div>
     </div>
+
   </main>
 </div>
 
@@ -46,7 +47,7 @@
 
   enquire.register("screen and (max-width:1280px)", {
     match: function () {
-      singleViewElem.forEach(function(elem) {
+      singleViewElem.forEach(function (elem) {
         elem.setAttribute('data-view', 'full');
       });
     },

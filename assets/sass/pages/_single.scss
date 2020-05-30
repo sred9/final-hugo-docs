@@ -39,7 +39,7 @@
   &__meta {
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
-    padding:0 1rem;
+    padding:0;
 
     @include flexbox();
     @include align-items(center);
@@ -81,8 +81,9 @@
     h6 {
       position: relative;      
       line-height: 1.25;
-      padding: 0 1rem;
+      padding: 0;
       font-family: $title-font;
+      font-weight: 500;
     }
 
     h1,
@@ -109,6 +110,8 @@
     h1 {
       font-size: 1.9rem;
       margin: 0rem 0 1.5rem 0;
+      font-weight: 500;
+    
     }
 
     h2 {
@@ -123,7 +126,7 @@
 
     h4 {
       font-size: 1.5rem;
-      margin: 2.4rem 0 1rem 0;
+      margin: 2.4rem 0 0;
     }
 
     h5 {
@@ -208,13 +211,14 @@
 
     p {
       margin: 0 0 10px 0;
-      padding: 0 1rem;      
+      padding: 0;      
 
       code:not([class^=language]) {
         padding: 3px 7px;
         margin: 0 0.25rem;
         @include themify($codeblock) {
           color: themed('content-code-color');
+          
         }
       }
     }
@@ -347,12 +351,14 @@ code, pre {
   overflow: auto;
 
   a {
-    text-decoration: none !important;
+    text-decoration: none;
   }
 }
 
+
 pre.chroma {
   padding: 0.65rem 0;
+  
 }
 
 *:not(.chroma) {
@@ -433,15 +439,23 @@ pre:not(.chroma) {
       top: 0;
       right: 0;
       z-index: z('grid');
-      height: 25px;
+      
+      font-size: 0.85rem;
       width: 100%;
       display: inline-block;
-      text-align: right;
+      text-align: left;
+      padding: 0.175rem 0.175rem;
+      line-height: 1;
+      width: fit-content;
+      border-radius: 3px;
+      text-transform: uppercase;
+      margin: 0.45rem 0.45rem 0 0;
+      
       content: attr(data-lang);
 
       @include themify($themes) {
         color: themed('body-background-color');
-        background: themed('body-background-color');
+        background: themed('navbar-background-color');
       }
     }
 
@@ -459,7 +473,7 @@ pre:not(.chroma) {
       display: inline-block;
       text-transform: capitalize;
       border-top-left-radius: 0.2rem;
-      content: attr(data-lang);
+      /*content: attr(data-lang);*/
 
       @include themify($themes) {
         border-top: 1px solid themed('hr-color');
@@ -531,10 +545,20 @@ td:not(.lntd) {
 }
 
 table:not(.lntable) {
-  // margin: 0 1rem;
+  // margin: 0;
   td {
     code {
       padding: 2px 7px !important;
     }
+  }
+}
+
+
+article{
+  h1{
+
+    font-size: 1.9rem;
+    margin: 0rem 0 0.25rem 0;
+    font-weight: 500;
   }
 }

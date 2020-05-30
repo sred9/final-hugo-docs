@@ -9,7 +9,7 @@
   .segment{
   border: 1px solid rgba(0,0,0,.05);
   border-radius: 3px;
-    padding: .75rem .5rem;
+    padding: .75rem 0.5rem;
     margin: .25rem 0;
 }
   }
@@ -82,13 +82,24 @@ list-style: none;
  
  
   border-radius: 3px;
-  color: #006400;
+
   display: block;
   font-weight: 500;
   padding: 0.9375em 1.09em;
   position: relative;
  
 }
+
+body.theme__dark .section-items .item-link{
+color: rgba(255,255,255,0.9);
+
+}
+
+body.theme__light .section-items .item-link{
+color: #006400;
+
+}
+
 .section-items .item-link:hover {
  border-color: #5b6ff1;
 /* 

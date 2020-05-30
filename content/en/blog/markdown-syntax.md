@@ -14,6 +14,7 @@ categories = [
     "syntax",
 ]
 series = ["Themes Guide"]
+image = "images/mountains.jpg"
 +++
 
 Lorem est tota propiore conpellat pectoribus de
