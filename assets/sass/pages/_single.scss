@@ -67,6 +67,7 @@
 
     & > p > a {
       text-decoration: underline;
+
     }
 
     margin: 0.35rem 0;
@@ -178,6 +179,8 @@
       @include themify($codeblock) {
         color: themed('content-code-color');
       }
+
+    
     }
 
     blockquote {
@@ -564,3 +567,12 @@ article{
     font-weight: 500;
   }
 }
+
+
+
+
+/*
+a:has(> code) {
+  text-decoration: none!important;
+}
+*/

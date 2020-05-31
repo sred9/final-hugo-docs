@@ -99,7 +99,7 @@ sections:
 </div>
 
 <div class="mast">
-<h2 class="segment-title">SEGMENT</h2>
+<h2 class="segment-title">Web Basics</h2>
 
 
 
@@ -107,10 +107,33 @@ sections:
   <li class="section-item"><a class="item-link" href="/html/"><span class="iconify" data-icon="logos:html-5" data-inline="false"></span>HTML<span class="icon-angle-right" aria-hidden="true"></span></a></li>
   <li class="section-item"><a class="item-link" href="/html/installation/"><span class="iconify" data-icon="logos:css-3" data-inline="false"></span>CSS<span class="icon-angle-right" aria-hidden="true"></span></a></li>
   <li class="section-item"><a class="item-link" href="/html/quick-start/"><span class="iconify" data-icon="logos:javascript" data-inline="false"></span>Javascript<span class="icon-angle-right" aria-hidden="true"></span></a></li>
-  <li class="section-item"><a class="item-link" href="/html/home/"><span class="iconify" data-icon="logos:html-5" data-inline="false"></span>Bulma<span class="icon-angle-right" aria-hidden="true"></span></a></li>
-  <li class="section-item"><a class="item-link" href="/html/home/"><span class="iconify" data-icon="logos:html-5" data-inline="false"></span>Semantic UI<span class="icon-angle-right" aria-hidden="true"></span></a></li>
-  <li class="section-item"><a class="item-link" href="/html/home/"><span class="iconify" data-icon="logos:html-5" data-inline="false"></span>Tailwind CSS<span class="icon-angle-right" aria-hidden="true"></span></a></li>
+  <li class="section-item"><a class="item-link" href="/html/home/"><span class="iconify" data-icon="logos:bootstrap" data-inline="false"></span>Bootstrap<span class="icon-angle-right" aria-hidden="true"></span></a></li>
+
 </ul>
+
+
+
+<h2 class="segment-title">Dev Basics</h2>
+
+
+
+<ul class="section-items home">
+  <li class="section-item"><a class="item-link" href="/html/"><span class="iconify" data-icon="logos:linux-tux" data-inline="false"></span>Linux<span class="icon-angle-right" aria-hidden="true"></span></a></li>
+  <li class="section-item"><a class="item-link" href="/html/installation/"><span class="iconify" data-icon="logos:git-icon" data-inline="false"></span>Git<span class="icon-angle-right" aria-hidden="true"></span></a></li>
+ 
+</ul>
+
+
+<h2 class="segment-title">Programming</h2>
+<ul class="section-items home">
+  <li class="section-item"><a class="item-link" href="/html/"><span class="iconify" data-icon="logos:c" data-inline="false"></span>C<span class="icon-angle-right" aria-hidden="true"></span></a></li>
+  <li class="section-item"><a class="item-link" href="/html/installation/"><span class="iconify" data-icon="logos:java" data-inline="false"></span>Java<span class="icon-angle-right" aria-hidden="true"></span></a></li>
+   <li class="section-item"><a class="item-link" href="/html/installation/"><span class="iconify" data-icon="logos:python" data-inline="false"></span>Python<span class="icon-angle-right" aria-hidden="true"></span></a></li>
+    <li class="section-item"><a class="item-link" href="/html/installation/"><span class="iconify" data-icon="logos:c-plusplus" data-inline="false"></span>C++<span class="icon-angle-right" aria-hidden="true"></span></a></li>
+ 
+</ul>
+
+
 
 
 </div>
