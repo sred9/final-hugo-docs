@@ -1,4 +1,4 @@
-baseURL = "http://example.org"
+baseURL = "https://upbeat-mcclintock-5517a2.netlify.app"
 title = "Hugo Zdoc Theme"
 theme = "zdoc"
 
