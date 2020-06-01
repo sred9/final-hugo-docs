@@ -1,6 +1,6 @@
 baseURL = "http://example.org"
 title = "Hugo Zdoc Theme"
-
+theme = "zdoc"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -28,7 +28,7 @@ disableKinds = ["taxonomyTerm"]
     lineNumbersInTable = true
     noClasses = false
   [markup.tableOfContents]
-    endLevel = 2
+    endLevel = 4
     ordered = false
     startLevel = 2
 
