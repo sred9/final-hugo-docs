@@ -11,7 +11,7 @@
 
   &__wrapper {
     width: 100%;
-   height: $grid-nav-height;
+    height: $grid-nav-height;
     position: fixed;
     left: 0;
     right: 0;
@@ -24,7 +24,7 @@
     }
 
     &[data-bgimg="false"] {
-      box-shadow: none; /*0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(60,65,70,0.1)*/
+      box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(60,65,70,0.1);
       @include themify($themes) {
         background-color: themed('navbar-background-color');
       }
@@ -48,13 +48,12 @@
     }
 
     &--item {
-      height: fit-content;
-      margin: auto 0;
-      padding: 0.185rem 0.75rem;
+      height: $grid-nav-height;
+      padding: 0rem 0.75rem;
 	  font-size: 18px!important;
 	
 		
-  
+		
 		
 		
       & > a {
@@ -71,24 +70,13 @@
 
       @include themify($themes) {
         color: themed('navbar-menu-color');
-
-
         &.active {
           font-weight: 400;
-          color: themed('active-font-color_nav');
+          color: themed('active-font-color');
 		  	
 			background-color: rgba(146,147,148,.3);
     border-bottom: 0 transparent;
     border-radius: 3px;
-
-        &:hover{
-         
-            transform: translateY(-1px);
-            box-shadow: -14 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
-          
-
-        }
-        
         }
       }
     }
@@ -115,11 +103,9 @@
           
           @include on-event {
             text-decoration: none;  
-            color: themed('navbar-hover-color');
+            color: themed('link-hover');
           }
 
-
-          
           &.active {
             font-weight: 400;
             color: themed('active-font-color');
@@ -320,19 +306,3 @@
   }
 }
 
-
-
-
-
-  ul.navbar__menu{
-
-    li{
-      a{
-        &:hover{
-          @include themify($themes) {
-            color: themed('navbar-hover-color');
-            }
-      }
-    }
-    }
-  }

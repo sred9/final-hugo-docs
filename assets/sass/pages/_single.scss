@@ -39,7 +39,7 @@
   &__meta {
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
-    padding:0;
+    padding:0 1rem;
 
     @include flexbox();
     @include align-items(center);
@@ -67,10 +67,9 @@
 
     & > p > a {
       text-decoration: underline;
-
     }
 
-    margin: 0.35rem 0;
+    margin: 1rem 0;
     line-height: 1.7;
     width: inheirt;
     max-width: inherit;
@@ -82,9 +81,8 @@
     h6 {
       position: relative;      
       line-height: 1.25;
-      padding: 0;
+      padding: 0 1rem;
       font-family: $title-font;
-      font-weight: 500;
     }
 
     h1,
@@ -111,13 +109,11 @@
     h1 {
       font-size: 1.9rem;
       margin: 0rem 0 1.5rem 0;
-      font-weight: 500;
-    
     }
 
     h2 {
-      font-size: 1.4rem;
-      margin: 1.5rem 0 1.5rem 0;
+      font-size: 2.2rem;
+      margin: 3.2rem 0 1.5rem 0;
     }
 
     h3 {
@@ -127,7 +123,7 @@
 
     h4 {
       font-size: 1.5rem;
-      margin: 2.4rem 0 0;
+      margin: 2.4rem 0 1rem 0;
     }
 
     h5 {
@@ -147,8 +143,8 @@
       direction: ltr;
 
       @include themify($themes) {
-        border-top: 0px solid themed('border-line-color');
-        border-bottom: 0px solid themed('border-line-color');
+        border-top: 1px solid themed('border-line-color');
+        border-bottom: 1px solid themed('border-line-color');
 
         @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
         @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
@@ -160,7 +156,7 @@
       margin: 1rem 0;
 
       @include themify($codeblock) {
-        border-left: 0px solid themed('content-pre-border-background-color');
+        border-left: 4px solid themed('content-pre-border-background-color');
       }
     }
 
@@ -179,8 +175,6 @@
       @include themify($codeblock) {
         color: themed('content-code-color');
       }
-
-    
     }
 
     blockquote {
@@ -214,14 +208,13 @@
 
     p {
       margin: 0 0 10px 0;
-      padding: 0;      
+      padding: 0 1rem;      
 
       code:not([class^=language]) {
         padding: 3px 7px;
         margin: 0 0.25rem;
         @include themify($codeblock) {
           color: themed('content-code-color');
-          
         }
       }
     }
@@ -354,14 +347,12 @@ code, pre {
   overflow: auto;
 
   a {
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }
 
-
 pre.chroma {
   padding: 0.65rem 0;
-  
 }
 
 *:not(.chroma) {
@@ -374,7 +365,6 @@ pre.chroma {
 
   code {
     padding: 0;
-    font-size: 1rem;
   }
 }
 
@@ -435,7 +425,6 @@ pre:not(.chroma) {
 
   code {
     padding: 0;
-    font-size: 1rem;
   }
 
   code[data-lang] {
@@ -444,23 +433,15 @@ pre:not(.chroma) {
       top: 0;
       right: 0;
       z-index: z('grid');
-      
-      font-size: 0.85rem;
+      height: 25px;
       width: 100%;
       display: inline-block;
-      text-align: left;
-      padding: 0.175rem 0.175rem;
-      line-height: 1;
-      width: fit-content;
-      border-radius: 3px;
-      text-transform: uppercase;
-      margin: 0.45rem 0.45rem 0 0;
-      
+      text-align: right;
       content: attr(data-lang);
 
       @include themify($themes) {
         color: themed('body-background-color');
-        background: themed('navbar-background-color');
+        background: themed('body-background-color');
       }
     }
 
@@ -478,7 +459,7 @@ pre:not(.chroma) {
       display: inline-block;
       text-transform: capitalize;
       border-top-left-radius: 0.2rem;
-      /*content: attr(data-lang);*/
+      content: attr(data-lang);
 
       @include themify($themes) {
         border-top: 1px solid themed('hr-color');
@@ -528,7 +509,7 @@ pre:not(.chroma) {
 
     @include themify($codeblock) {
       td:first-child {
-        border-left: 0px solid themed('content-pre-border-background-color');
+        border-left: 4px solid themed('content-pre-border-background-color');
       }
     }
   }
@@ -550,29 +531,10 @@ td:not(.lntd) {
 }
 
 table:not(.lntable) {
-  // margin: 0;
+  // margin: 0 1rem;
   td {
     code {
       padding: 2px 7px !important;
     }
   }
 }
-
-
-article{
-  h1{
-
-    font-size: 1.9rem;
-    margin: 0rem 0 0.25rem 0;
-    font-weight: 500;
-  }
-}
-
-
-
-
-/*
-a:has(> code) {
-  text-decoration: none!important;
-}
-*/

@@ -8,15 +8,10 @@
     </nav>
 
     <article id="list-main" class="m" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
-      
-      <h1>{{ .Title }}</h1>
-      <!--{{ partial "main/component/pagination-single.html" . }}-->
-      
       {{ partial "main/component/toggle-sidebar.html" . }}
       {{ partial "main/sections/list-main.html" . }}
       {{ partial "main/component/pagination-single.html" . }}
       {{ partial "comments/comments.html" . }}
-		<!--{{ partial "script/codeblock-script" . }}-->
     </article>
     
     <section id="list-side" class="r" data-dir="{{ $.Param "languagedir" | default "ltr" }}">

@@ -35,7 +35,6 @@
     display: grid;
     height: 100%;
     grid-template-columns: minmax(200px, 220px) minmax(350px, 800px) minmax(200px, 340px);
-   
     grid-template-rows: auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -62,7 +61,7 @@
     grid-row-gap: 0px;
 
     &[data-view="full"] {
-        grid-template-columns: 855px;
+        grid-template-columns: 769px;
     }
 
     &[data-view="mobile"] {

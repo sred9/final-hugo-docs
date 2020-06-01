@@ -1,11 +1,11 @@
 <div class="menu">
-  <!--<h6 class="menu__label">
+  <h6 class="menu__label">
     {{ if .IsHome }}
       {{ .Site.Title }}
     {{ else }}
       {{ $.Param "Title" }}
     {{ end }}
-  </h6>-->
+  </h6>
   <ul>
     {{ $root := . }}
     {{ range (.Site.GetPage "section" .Type).Pages }}
@@ -24,12 +24,8 @@
   {{ $sectionName2 := index (last 2 (split (delimit (split $currentURL "/") "," "") ",")) 0 }}
 
   {{ $active := in $currentURL $ctx.Permalink }}
-
-  <!--
-<remove>  { $active = or $active (eq $sectionName1 $sectionName2) }
-  { $active = or $active (in $currentURL $sectionName1) }
-</remove>
--->
+  {{ $active = or $active (eq $sectionName1 $sectionName2) }}
+  {{ $active = or $active (in $currentURL $sectionName1) }}
   
   {{ if $ctx.Params.Collapsible }}
   <span class="menu__title--collapse {{ if $active }}active{{ end }}" data-depth="{{ $depth }}">

@@ -1,33 +1,20 @@
 .summary-card {
   padding: 1rem;
-  
+  padding-bottom: 0;
   margin: 1.5rem 0;
   position: relative;
 
-  display: flex;
-  flex: 1 1 100%;
-    flex-direction: row;
-    box-shadow: none;
-
   @include themify($themes) {
     background-color: themed('body-background-color');
-    border-bottom: 0px solid themed('hr-color');
+    border-bottom: 1px solid themed('hr-color');
   }
-  /*@include themify($themes) {
-  &:hover{
-    border: 1px solid themed('link-hover');
-    border-radius: 4px;
-  }
-}*/
 
   .title {
     text-align: center;
     a {
       font-family: $title-font;
-      font-weight: 500;
+      font-weight: 700;
       word-break: break-word;
-      line-height: 30px;
-      font-size: 20px;
 
       @include themify($themes) {
         color: themed('link');
@@ -49,20 +36,6 @@
     }
   }
 
-  &__title {
-
-    line-height: 28px;
-    margin: 0rem 0 0.75rem 0;
-
-    a{
-    font-size: 25px;
-    font-weight: 500;
-    
-    &:hover{
-      text-decoration: underline;
-    }
-    }
-  }
   &__links {
     font-size: 0.8rem;
     
@@ -75,28 +48,18 @@
 
   &__tag {
     margin-right: 0.5rem;
-    margin-bottom: 0rem;
-    padding: 0.125rem 0rem;
+    margin-bottom: 0.35rem;
+    padding: 0.125rem 0.25rem;
     border-top-left-radius: 0.15rem;
     border-top-right-radius: 0.15rem;
     cursor: pointer;
-    font-size: 13px;
-    text-transform: uppercase;
     
     @include themify($themes) {
-      border: 0px solid themed('hr-color');
+      border: 1px solid themed('hr-color');
       border-bottom: none;
-      color: themed('body-color');
-    }
-
-    &:hover{
-      text-decoration: underline!important;
     }
   }
-&__main{
-  flex: 0 1 70%;
-  
-}
+
   &__content {
     margin-bottom: 1rem;
 
@@ -111,20 +74,15 @@
   }
 
   &__image {
-    width: 242px;
+    width: 100%;
     height: 100%;
     
     &-wrapper {
-     
+      height: 100%;
       width: auto;
       margin: 0 auto;
-      padding: 0rem 0;
+      padding: 1rem 0;
       padding-bottom: 0;
-      position: relative;
-      flex: 1 1 300px;
-      
-  
-      
     }
   }
 

@@ -1,6 +1,6 @@
 +++
 author = "Hugo Authors"
-title = "Creating a Todo API in Deno/Oak, written by a guy coming from Node/ExpressJS"
+title = "Emoji Support"
 date = "2019-03-05"
 # description = "Guide to emoji usage in Hugo"
 tags = [
