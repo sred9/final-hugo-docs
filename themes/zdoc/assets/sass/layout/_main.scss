@@ -1,6 +1,7 @@
 .mid {
   @include themify($themes) {
     background-color: themed('back-background-color');
+
   }
 }
 .main {
@@ -10,5 +11,22 @@
   @include justify-content(center);
   @include themify($themes) {
     background-color: themed('back-background-color');
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: #c7c7c7;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  @include themify($themes) {
+    background-color: themed('scrollBar-track');
   }
 }

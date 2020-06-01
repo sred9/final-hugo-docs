@@ -1,11 +1,11 @@
 #single-menu {
   @include themify($themes) {
     &[data-dir="ltr"] {
-      border-right: 1px solid themed('border-line-color');
+      border: 0px solid themed('border-line-color');
     }
 
     &[data-dir="rtl"] {
-      border-left: 1px solid themed('border-line-color');
+      border: 0px solid themed('border-line-color');
     }
   }
 }
@@ -25,7 +25,7 @@
 
   &__title {
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 500;
     font-family: $title-font;
     line-height: 3rem;
     overflow-wrap: break-word;
@@ -39,7 +39,7 @@
   &__meta {
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
-    padding:0 1rem;
+    padding:0;
 
     @include flexbox();
     @include align-items(center);
@@ -67,9 +67,10 @@
 
     & > p > a {
       text-decoration: underline;
+
     }
 
-    margin: 1rem 0;
+    margin: 0.35rem 0;
     line-height: 1.7;
     width: inheirt;
     max-width: inherit;
@@ -81,14 +82,15 @@
     h6 {
       position: relative;      
       line-height: 1.25;
-      padding: 0 1rem;
+      padding: 0;
       font-family: $title-font;
+      font-weight: 500;
     }
 
     h1,
     h2 {
       color: inherit;
-      font-weight: 900;
+      font-weight: 500;
       text-rendering: optimizeLegibility; 
 
       @include themify($themes) {
@@ -102,17 +104,20 @@
     h6 {
       @include themify($themes) {
         color: themed("single-contents-subtitle-color");
+
       }
     }
 
     h1 {
-      font-size: 2.6rem;
-      margin: 3.5rem 0 1.75rem 0;
+      font-size: 1.9rem;
+      margin: 0rem 0 1.5rem 0;
+      font-weight: 500;
+    
     }
 
     h2 {
-      font-size: 2.2rem;
-      margin: 3.2rem 0 1.5rem 0;
+      font-size: 1.4rem;
+      margin: 1.5rem 0 1.5rem 0;
     }
 
     h3 {
@@ -122,7 +127,7 @@
 
     h4 {
       font-size: 1.5rem;
-      margin: 2.4rem 0 1rem 0;
+      margin: 2.4rem 0 0;
     }
 
     h5 {
@@ -142,8 +147,8 @@
       direction: ltr;
 
       @include themify($themes) {
-        border-top: 1px solid themed('border-line-color');
-        border-bottom: 1px solid themed('border-line-color');
+        border-top: 0px solid themed('border-line-color');
+        border-bottom: 0px solid themed('border-line-color');
 
         @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
         @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
@@ -155,7 +160,7 @@
       margin: 1rem 0;
 
       @include themify($codeblock) {
-        border-left: 4px solid themed('content-pre-border-background-color');
+        border-left: 0px solid themed('content-pre-border-background-color');
       }
     }
 
@@ -174,6 +179,8 @@
       @include themify($codeblock) {
         color: themed('content-code-color');
       }
+
+    
     }
 
     blockquote {
@@ -207,13 +214,14 @@
 
     p {
       margin: 0 0 10px 0;
-      padding: 0 1rem;      
+      padding: 0;      
 
       code:not([class^=language]) {
         padding: 3px 7px;
         margin: 0 0.25rem;
         @include themify($codeblock) {
           color: themed('content-code-color');
+          
         }
       }
     }
@@ -278,7 +286,7 @@
 
     a.footnote-ref {
       font-size: 0.75rem;
-      font-weight: bold;
+      font-weight: 500;
       margin-left: 3px;
 
       &::before {
@@ -346,12 +354,14 @@ code, pre {
   overflow: auto;
 
   a {
-    text-decoration: none !important;
+    text-decoration: none;
   }
 }
 
+
 pre.chroma {
   padding: 0.65rem 0;
+  
 }
 
 *:not(.chroma) {
@@ -364,6 +374,7 @@ pre.chroma {
 
   code {
     padding: 0;
+    font-size: 1rem;
   }
 }
 
@@ -424,6 +435,7 @@ pre:not(.chroma) {
 
   code {
     padding: 0;
+    font-size: 1rem;
   }
 
   code[data-lang] {
@@ -432,15 +444,23 @@ pre:not(.chroma) {
       top: 0;
       right: 0;
       z-index: z('grid');
-      height: 25px;
+      
+      font-size: 0.85rem;
       width: 100%;
       display: inline-block;
-      text-align: right;
+      text-align: left;
+      padding: 0.175rem 0.175rem;
+      line-height: 1;
+      width: fit-content;
+      border-radius: 3px;
+      text-transform: uppercase;
+      margin: 0.45rem 0.45rem 0 0;
+      
       content: attr(data-lang);
 
       @include themify($themes) {
         color: themed('body-background-color');
-        background: themed('body-background-color');
+        background: themed('navbar-background-color');
       }
     }
 
@@ -452,13 +472,13 @@ pre:not(.chroma) {
       padding: 0.125rem 0.25rem;
       height: 25px;
       font-family: $title-font;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 0.85rem;
       line-height: 1.5;
       display: inline-block;
       text-transform: capitalize;
       border-top-left-radius: 0.2rem;
-      content: attr(data-lang);
+      /*content: attr(data-lang);*/
 
       @include themify($themes) {
         border-top: 1px solid themed('hr-color');
@@ -508,7 +528,7 @@ pre:not(.chroma) {
 
     @include themify($codeblock) {
       td:first-child {
-        border-left: 4px solid themed('content-pre-border-background-color');
+        border-left: 0px solid themed('content-pre-border-background-color');
       }
     }
   }
@@ -530,10 +550,29 @@ td:not(.lntd) {
 }
 
 table:not(.lntable) {
-  // margin: 0 1rem;
+  // margin: 0;
   td {
     code {
       padding: 2px 7px !important;
     }
   }
 }
+
+
+article{
+  h1{
+
+    font-size: 1.9rem;
+    margin: 0rem 0 0.25rem 0;
+    font-weight: 500;
+  }
+}
+
+
+
+
+/*
+a:has(> code) {
+  text-decoration: none!important;
+}
+*/

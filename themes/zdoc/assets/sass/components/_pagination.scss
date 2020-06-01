@@ -89,8 +89,9 @@
     color: inherit;
 
     svg {
-      display: block;
+      display: inline-block;
       margin: auto;
+      vertical-align: middle;
     }
   }
 }

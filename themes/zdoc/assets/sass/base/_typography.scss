@@ -3,14 +3,17 @@
  */
 
  html {
-  font-family: sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji!important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 4rem;
 }
 
 body {
-  font-size: 1rem;
-  font-family: $text-font-stack;
+  
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji!important;
+  font-size: 18px;
+    
 }
 
 code,
@@ -52,5 +55,10 @@ pre {
 }
 
 .caption {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+}
+
+a, li, p{
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji!important;
+  font-size: 18px;
 }

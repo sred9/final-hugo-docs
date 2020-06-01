@@ -1,11 +1,11 @@
 .bot {
   @include themify($themes) {
-    background-color: themed('navbar-background-color');
+    background-color: themed('footer-background-color');
   }
 }
 .footer {
   @include themify($themes) {
-    border-top: 1px solid themed('border-line-color');
+    border-top: 0px solid themed('border-line-color');
   }
 
   padding: 1rem;

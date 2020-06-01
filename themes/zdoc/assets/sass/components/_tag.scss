@@ -1,7 +1,7 @@
 .tag {
   display: inline-block;
   margin: 0.25rem 0.4rem;
-  text-decoration: none !important;
+  text-decoration: none;
 
   @include themify($themes) {
     color: darken(themed('subtitle-color'), 5%);
