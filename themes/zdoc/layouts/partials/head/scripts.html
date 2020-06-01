@@ -317,7 +317,62 @@
     };
     // ============================================================
 
+	 // ============================ tab ============================
+    document.querySelectorAll('.tab') ? 
+    document.querySelectorAll('.tab').forEach(function(elem, idx) {
+      var containerId = elem.getAttribute('id');
+      var containerElem = elem;
+      var tabLinks = elem.querySelectorAll('.tab__link');
+      var tabContents = elem.querySelectorAll('.tab__content');
+      var ids = [];
 
+      tabLinks && tabLinks.length > 0 ?
+      tabLinks.forEach(function(link, index, self) {
+        link.onclick = function(e) {
+          for (var i = 0; i < self.length; i++) {
+            if (index === parseInt(i, 10)) {
+              if (!self[i].classList.contains('active')) {
+                self[i].classList.add('active');
+                tabContents[i].style.display = 'block';
+              }
+            } else {
+              self[i].classList.remove('active');
+              tabContents[i].style.display = 'none';
+            }
+          }
+        }
+      }) : null;
+    }) : null;
+    // =============================================================
+
+
+    // ========================== codetab ==========================
+    document.querySelectorAll('.codetab') ? 
+    document.querySelectorAll('.codetab').forEach(function(elem, idx) {
+      var containerId = elem.getAttribute('id');
+      var containerElem = elem;
+      var codetabLinks = elem.querySelectorAll('.codetab__link');
+      var codetabContents = elem.querySelectorAll('.codetab__content');
+      var ids = [];
+
+      codetabLinks && codetabLinks.length > 0 ?
+      codetabLinks.forEach(function(link, index, self) {
+        link.onclick = function(e) {
+          for (var i = 0; i < self.length; i++) {
+            if (index === parseInt(i, 10)) {
+              if (!self[i].classList.contains('active')) {
+                self[i].classList.add('active');
+                codetabContents[i].style.display = 'block';
+              }
+            } else {
+              self[i].classList.remove('active');
+              codetabContents[i].style.display = 'none';
+            }
+          }
+        }
+      }) : null;
+    }) : null;
+    // =============================================================
 
     // ====================== mobile search =======================
     var mobileSearchInputElem = document.querySelector('#search-mobile');
@@ -961,5 +1016,187 @@
       }) : null;
     }) : null;
   // ============================================================
+  
+  // ==================== add links in all titles ====================
+    var text, clip = new ClipboardJS('.anchor');
+    var headers = singleContentsElem.querySelectorAll("h1, h2, h3, h4");
+
+    {{ $languagedir := ($.Param "languagedir" | default "ltr") }}
+    var languagedir = JSON.parse({{ $languagedir | jsonify }});
+
+    headers ? 
+    headers.forEach(function (elem) {
+      var url = encodeURI(document.location.origin + document.location.pathname);
+      var link = url + "#" + elem.getAttribute('id');
+      var newElemOuter = document.createElement('span');
+      newElemOuter.classList.add('anchor');
+      newElemOuter.classList.add('hide');
+      newElemOuter.setAttribute('data-clipboard-text', link);
+      newElemOuter.style.position = 'relative';
+
+      var newElemInner = document.createElement('span');
+      newElemInner.style.fontSize = '1rem';
+      newElemInner.style.position = 'absolute';
+      newElemInner.style.top = '50%';
+      newElemInner.style.transform = 'translateY(-50%)';
+      newElemInner.innerText = "🔗";
+
+      if (languagedir === "rtl") {
+        newElemInner.style.left = '-2rem';
+      } else {
+        newElemInner.style.right = '-2rem';
+      }
+
+      newElemOuter.append(newElemInner);
+      elem.append(newElemOuter);
+
+      elem.addEventListener('mouseenter', function() {
+        this.querySelector('.anchor').classList.remove('hide');
+      });
+      elem.addEventListener('mouseleave', function () {
+        this.querySelector('.anchor').classList.add('hide');
+      });
+    }) : null;
+
+    document.querySelectorAll('.anchor').forEach(function(elem) {
+      elem.addEventListener('mouseleave', function() {
+        elem.setAttribute('aria-label', null);
+        elem.classList.remove('tooltipped');
+        elem.classList.remove('tooltipped-s');
+        elem.classList.remove('tooltipped-w');
+      });
+    });
+
+    clip.on('success', function (e) {
+      e.clearSelection();
+      e.trigger.setAttribute('aria-label', 'Link copied to clipboard!');
+      e.trigger.classList.add('tooltipped');
+      e.trigger.classList.add('tooltipped-s');
+    });
+    // =================================================================
+
+
+    // =========================== clipboard ===========================
+    var clipInit = false;
+    var preChromaElem = document.querySelectorAll('pre.chroma');
+    var langCodeElem = document.querySelectorAll('.language-code');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
+    var gtCodeElem = document.querySelectorAll('div.language-\\>');
+
+    var makeClipboard = function(elem) {
+      var code = elem,
+        text = elem.textContent;
+        
+      if (text.length > 15) {
+        if (!clipInit) {
+          var text, clip = new ClipboardJS('.copy-to-clipboard', {
+            text: function (trigger) {
+              var codeElem = prev(trigger).querySelectorAll('code');
+              if (codeElem.length > 1) {
+                text = prev(trigger).querySelector('code[class^="language-"]').textContent;
+              } else {
+                text = prev(trigger).querySelector('code').textContent;
+              }
+
+              return text.replace(/^\$\s/gm, '');
+            }
+          });
+
+          var inPre;
+          clip.on('success', function (e) {
+            e.clearSelection();
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clip.on('error', function (e) {
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', e.action.toString());
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clipInit = true;
+        }
+
+        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
+        var isNotAllowedIncluded = false;
+        var curClassName = code.getAttribute('class');
+
+        for (var i = 0; i < notAllowedClass.length; i++) {
+          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
+            isNotAllowedIncluded = true;
+            break;
+          }
+        }
+
+        if (!isNotAllowedIncluded) {
+          if (curClassName) {
+            var newClipboardElem = document.createElement('span');
+            newClipboardElem.setAttribute('class', 'copy-to-clipboard');
+            newClipboardElem.setAttribute('title', 'Copy to clipboard');
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
+          }
+        }
+      }
+    }
+
+    var makeSymbolClipboard = function(elem) {
+      var clipboardSpan = document.createElement('span');
+      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
+      clipboardSpan.setAttribute('title', 'Copy to clipboard');
+      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
+    }
+
+    preChromaElem ? 
+    preChromaElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function(codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+    
+    langCodeElem ? 
+    langCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+
+    gtCodeElem ?
+    gtCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+    // =================================================================
+
   }
 </script>
+
+
+
+<!-- Include quicklink from dist -->
+<!--
+<script src="https://unpkg.com/quicklink@2.0.0/dist/quicklink.umd.js"></script>-->
+<!-- Initialize (you can do this whenever you want) -->
+<!--<script>
+window.addEventListener('load', () => {
+  quicklink.listen({
+  limit: 5
+  });
+});
+</script>-->
+
+
+<script src="//instant.page/5.0.1" type="module" integrity="sha384-0DvoZ9kNcB36fWcQApIMIGQoTzoBDYTQ85e8nmsfFOGz4RHAdUhADqJt4k3K2uLS"></script>
+
+<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>

@@ -1,7 +1,7 @@
 {{ $.context.Content }}
 <div class="list-section">
   {{ range .section_to_display }}
-    <div class="list-section__item">
+    <div class="{{ .Title }}" class="list-section__item">
       <a href="{{ .Permalink }}" class="list-section__item--link">
         {{ .Title }}
       </a>

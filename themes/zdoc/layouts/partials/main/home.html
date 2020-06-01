@@ -1,6 +1,131 @@
 <div class="mid">
-  <main class="main">
-    {{ partial "main/landing/home-landing.html" . }}
-  </main>
-  {{ partial "main/landing/home-sections.html" . }}
+  <div class="">
+  <style>
+  .mast{
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  }
+  .segment{
+  border: 1px solid rgba(0,0,0,.05);
+  border-radius: 3px;
+    padding: .75rem 0.5rem;
+    margin: .25rem 0;
+}
+  }
+  
+  
+  
+  ul.section-items.home li.section-item a.item-link {
+  text-decoration: none;
+}
+ul.section-items.home li.section-item a.item-link svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  vertical-align: middle;
+  margin-right: 0.75rem;
+}
+.icon-angle-right {
+  background: 0;
+  border-color: currentColor;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  box-sizing: border-box;
+  height: 8px;
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.section-item .icon-angle-right {
+  left: auto;
+  margin-left: 0;
+  margin-right: 15px;
+  right: 0;
+}
+.section-items {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-left: -0.3125em;
+  margin-right: -0.3125em;
+  padding: 0;
+  
+}
+
+.section-items.home{
+list-style: none;
+}
+
+.single__contents .section-items .section-item {
+  -webkit-flex: 1 1 240px;
+  -ms-flex: 1 1 240px;
+  flex: 1 1 240px;
+  margin: 0 0.3125em 0.9375em; 0.3125em;
+ text-align: left;
+ max-width: 50%;
+  
+}
+
+
+.section-items .item-link {
+   border: 1px solid #dee5ef;
+  /* box-shadow: #e4e8ee 0px 0px 0px 0.5px;*/
+
+ 
+ 
+  border-radius: 3px;
+
+  display: block;
+  font-weight: 500;
+  padding: 0.9375em 1.09em;
+  position: relative;
+ 
+}
+
+body.theme__dark .section-items .item-link{
+color: rgba(255,255,255,0.9);
+
+}
+
+body.theme__light .section-items .item-link{
+color: #006400;
+
+}
+
+.section-items .item-link:hover {
+ border-color: #5b6ff1;
+/* 
+ border: 1px solid #dee5ef;
+ box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+*/
+ 
+
+}
+.inner ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 18px;
+}
+  </style>
+    <article id="list-main" class="m" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
+      {{ partial "main/sections/list-main.html" . }}
+      {{ partial "main/component/pagination-single.html" . }}
+      {{ partial "comments/comments.html" . }}
+    </article>
+    
+
+
+  </div>
 </div>
+

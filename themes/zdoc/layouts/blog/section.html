@@ -14,7 +14,7 @@
         {{ range $index, $element := .Site.Taxonomies.tags }}
           {{ if $index }}
             <a href="{{ $element.Page.RelPermalink }}" class="tag">
-              <span class="tag__text">
+              <span id="{{ $element.Page.Title }}" class="tag__text">
                 {{ $element.Page.Title }}
               </span>
               <span class="tag__num" dir="auto">
