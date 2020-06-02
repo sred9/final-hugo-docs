@@ -5,3 +5,11 @@
     { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }
+
+{
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.71.0"
+    }
+  }
+}
