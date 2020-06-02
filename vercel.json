@@ -1,13 +1,7 @@
 {
-  "version": 2,
-    "build": {
+  "build": {
     "env": {
       "HUGO_VERSION": "0.71.0"
     }
   }
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
-  ]
 }
-
