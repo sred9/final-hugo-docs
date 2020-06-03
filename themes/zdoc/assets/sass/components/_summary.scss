@@ -1,0 +1,158 @@
+.summary-card {
+  padding: 1rem;
+  
+  margin: 1.5rem 0;
+  position: relative;
+
+  display: flex;
+  flex: 1 1 100%;
+    flex-direction: row;
+    box-shadow: none;
+
+  @include themify($themes) {
+    background-color: themed('body-background-color');
+    border-bottom: 0px solid themed('hr-color');
+  }
+  /*@include themify($themes) {
+  &:hover{
+    border: 1px solid themed('link-hover');
+    border-radius: 4px;
+  }
+}*/
+
+  .title {
+    text-align: center;
+    a {
+      font-family: $title-font;
+      font-weight: 500;
+      word-break: break-word;
+      line-height: 30px;
+      font-size: 20px;
+
+      @include themify($themes) {
+        color: themed('link');
+        @include on-event {
+          color: themed('link-hover');
+        }
+      }
+    }
+  }
+
+  .subtitle {
+    padding: 1rem 0;
+
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    @include themify($themes) {
+      color: themed('meta-color');
+    }
+  }
+
+  &__title {
+
+    line-height: 28px;
+    margin: 0rem 0 0.75rem 0;
+
+    a{
+    font-size: 25px;
+    font-weight: 500;
+    
+    &:hover{
+      text-decoration: underline;
+    }
+    }
+  }
+  &__links {
+    font-size: 0.8rem;
+    
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include themify($themes) {
+      background-color: themed('body-background-color');
+    }
+  }
+
+  &__tag {
+    margin-right: 0.5rem;
+    margin-bottom: 0rem;
+    padding: 0.125rem 0rem;
+    border-top-left-radius: 0.15rem;
+    border-top-right-radius: 0.15rem;
+    cursor: pointer;
+    font-size: 13px;
+    text-transform: uppercase;
+    
+    @include themify($themes) {
+      border: 0px solid themed('hr-color');
+      border-bottom: none;
+      color: themed('body-color');
+    }
+
+    &:hover{
+      text-decoration: underline!important;
+    }
+  }
+&__main{
+  flex: 0 1 70%;
+  
+}
+  &__content {
+    margin-bottom: 1rem;
+
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+  }
+
+  &__text {
+    margin-top: 1rem;
+    line-height: 1.7rem;
+  }
+
+  &__image {
+    width: 242px;
+    height: 100%;
+    
+    &-wrapper {
+     
+      width: auto;
+      margin: 0 auto;
+      padding: 0rem 0;
+      padding-bottom: 0;
+      position: relative;
+      flex: 1 1 300px;
+      
+  
+      
+    }
+  }
+
+  &__video {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+
+    &-wrapper {
+      padding: 1rem;
+      padding-bottom: 0;
+    }
+  }
+
+  hr {
+    margin-top: 1.5rem;
+    @include themify($themes) {
+        border-top: 1px solid themed('hr-color');
+    }
+  }
+  &:not(:last-child) {
+    hr {
+      margin-bottom: 4rem;      
+    }
+  }
+  &:last-child {
+    hr {
+      margin-bottom: 2rem;
+    }
+  }
+}
